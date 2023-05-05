@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(205, 199, 199);
+}
+table,th,td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+table{
+    width:90%;
+}
+th,td{
+    padding: 5px;
+  
+}
+h1{
+    border: 2px solid black;
+    background-color: black;
+    color: white;
+    display: block;
+    width: 100%;
+    padding: 1rem;
+}
+input[type="search"]{
+    background-color: rgb(227, 226, 226);
+    width: 80%;
+    margin:2rem 3rem;
+    font-size: 1rem;
+    color: black;
+    padding: 1rem;
+}
+button{
+ display: inline-block;   
+ outline: none;
+ padding: 1rem;
+ width: 9%;
+ font-size: 1rem;
+ background-color: black;
+ color: white;
+ 
+}
+button:hover{
+    background-color: rgb(49, 48, 48);
+    transition: 1s;
+}
+.contain{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 1rem;
+    /* border: 2px solid black; */
+    margin-bottom: 2rem;
+}
+.container span{
+    border: 2px solid black;
+    padding: 1rem;
+    background-color: black;
+    color: white;
+}
+span:hover{
+    background-color: rgb(49, 48, 48);
+    transition: 1s;
+}
+table{
+    margin: 2rem 5rem;
+    background-color: rgb(234, 226, 226);
+}
+.ascending,.descending,.passing,.marks,.class,.gender{
+    width: 10rem;
+}
+table img{
+    width: 1.5rem;
+   margin-right: 2rem;
+    border: 1px solid black;
+    border-radius: 50%;
+text-align: right;
+    
+}

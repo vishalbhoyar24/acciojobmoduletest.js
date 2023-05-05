@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Student Portal</h1>
+    <input type="search" onkeyup="myFunction()" placeholder="Search">
+    <button>Search</button>
+    <div class="contain">
+        <div>
+           
+            <button class="ascending">Sort A - Z</button>
+        </div>
+        <div>
+            <button class="descending">Sort Z - A</button>
+        </div>
+        <div>
+            <button class="marks">Sort By Marks</button>
+        </div>
+        <div>
+           <button class="passing">Sort By Passing</button>
+        </div>
+        <div>
+           <button class="class">Sort By Class</button>
+        </div>
+        <div>
+            <button class="gender">Sort By Gender</button>
+        </div>
+    </div>
+
+<div class="container table">
+    <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Class</th>
+            <th scope="col">Marks</th>
+            <th scope="col">Passing</th>
+            <th scope="col">Email</th>
+          </tr>
+        </thead>
+        <tbody class="table-body"></tbody>
+    </table>
+</div>
+    <script>
+        let input = document.querySelector("input");
+        function myFunction(e){
+        let filter = input.value.toUpperCase();
+        let tr = document.querySelectorAll("tr");
+        for(let i = 1; i < tr.length; i++){
+            let a = tr[i].children[1].textContent.toUpperCase();
+
+            let b = tr[i].children[6].textContent.toUpperCase();
+            if(a.indexOf(filter) > -1 || b.indexOf(filter) > -1){
+                tr[i].style.display = "";
+            }else{
+                tr[i].style.display = "none";
+            }
+        }
+    }
+    </script>
+</body>
+</html>
